@@ -1,0 +1,50 @@
+@use '~src/global' as *;
+
+.flying-container{
+    @extend %flex-row;
+    position: absolute;
+    width: 100%;
+    top: 20vh;
+    transform: translateY(-50%);
+}
+
+.filter-box-container{
+    @extend %flex-row;
+    width: 80%;
+    padding: 20px 30px;
+    margin: auto;
+    background-color: white;
+    box-shadow: 0px 8px 30px -8px $prime;
+    border-radius: 8px;
+}
+
+.filter-content{
+    @extend %flex-row;
+    flex-wrap: wrap;
+    width: 95%;
+}
+
+.filter-clear-btn{
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+    color: $dgc;
+    font-weight: 700;
+    padding: 2px;
+    &:hover{
+        color: $prime;
+        cursor: pointer;
+    }
+    
+    #clear-btn{
+        margin: auto;
+        border: 2px solid white;
+        border-top: 0;
+        border-right: 0;
+        border-left: 0;
+        transition: .3s linear;
+        &:hover{
+            border-bottom: 2px solid $prime;
+        }
+    }
+}
