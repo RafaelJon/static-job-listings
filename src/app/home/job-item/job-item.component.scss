@@ -1,0 +1,82 @@
+@use '~src/global' as *;
+
+.job-item-container{
+    @extend %flex-row;
+    width: 80%;
+    margin: 20px auto;
+    justify-content: flex-start;
+    background-color: white;
+    box-shadow: 0px 8px 30px -8px $prime;
+    padding: 30px;
+}
+
+.job-detail-container{
+    @extend %flex-col;
+    justify-content: space-around;
+    width: 40%;
+}
+
+.filter-container{
+    @extend %flex-row;
+    justify-content: flex-end;
+    width: 50%;
+}
+
+.company-icon-container{
+    width: 10%;
+}
+
+.company-icon-container img{
+    object-fit: cover;
+    width: 80%;
+}
+
+.company-container{
+    @extend %flex-row;
+    font-size: 15px;
+    font-weight: 700;
+    align-items: center;
+}
+
+%bubble{
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-weight: 700;
+    margin: 0 10px;
+}
+
+.new-bubble{
+    @extend %bubble;
+    background-color: $prime;
+    
+}
+
+.featured-bubble{
+    @extend %bubble;
+    background-color: $v-dgc;
+    margin: 0;
+}
+
+.job-container{
+    font-size: 20px;
+    font-weight: 700;
+    transition: .3s linear;
+
+    &:hover{
+        color: $prime;
+        cursor: pointer;
+        transition: .3s linear;
+    }
+}
+
+.job-desc-container{
+    @extend %flex-row;
+    color: $dgc;
+    p{
+        margin: 0;
+    }
+    .dot-seperator{
+        margin: 0 12px;
+    }
+}

@@ -1,0 +1,19 @@
+@use '~src/global' as *;
+
+.container{
+    height: 100%;
+}
+
+.header{
+    height: 20vh;
+    background: url('/assets/images/bg-header-desktop.svg');    
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: $prime;
+}
+
+.content{
+    background-color: $lgc-b;
+    padding: 70px 0;
+}

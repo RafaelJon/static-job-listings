@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "static-job-listing-master"
+    }
+  },
+  "defaultProject": "static-job-listing-master",
+  "cli": {
+    "analytics": false
+  }
 }
