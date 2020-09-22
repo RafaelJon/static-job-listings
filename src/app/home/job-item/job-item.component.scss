@@ -8,6 +8,14 @@
     background-color: white;
     box-shadow: 0px 8px 30px -8px $prime;
     padding: 30px;
+    border: 8px solid white;
+    border-bottom: 0;
+    border-top: 0;
+    border-radius: 8px;
+    transition: .3s linear;
+    &:hover{
+        border-left-color: $prime;        
+    }
 }
 
 .job-detail-container{
@@ -18,7 +26,10 @@
 
 .filter-container{
     @extend %flex-row;
-    justify-content: flex-end;
+    flex-wrap: wrap;
+	justify-content: flex-end;
+	align-items: flex-start;
+	align-content: center;
     width: 50%;
 }
 
@@ -36,20 +47,21 @@
     font-size: 15px;
     font-weight: 700;
     align-items: center;
+    color: $prime;
 }
 
 %bubble{
     color: white;
-    padding: 5px 10px;
+    padding: 10px 12px 7px;
     border-radius: 20px;
     font-weight: 700;
-    margin: 0 10px;
 }
 
 .new-bubble{
     @extend %bubble;
     background-color: $prime;
-    
+    margin-left: 25px;
+    margin-right: 10px;
 }
 
 .featured-bubble{
@@ -68,6 +80,10 @@
         cursor: pointer;
         transition: .3s linear;
     }
+}
+
+.job-item-container{
+
 }
 
 .job-desc-container{

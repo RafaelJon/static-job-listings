@@ -1,0 +1,19 @@
+@use '~src/global' as *;
+
+.filter-item-container{
+    font-size: 15px;
+    font-weight: 700;
+    align-items: center;
+    color: $prime;
+    background-color: $lgc-t;
+    padding: 12px 9px 7px 9px;
+    margin: 0 8px;
+    border-radius: 5px;
+    transition: .3s linear;
+
+    &:hover{
+        background-color: $prime;
+        color: $lgc-t;
+        cursor: pointer;
+    }
+}
