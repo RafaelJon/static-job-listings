@@ -121,6 +121,10 @@
               "devServerTarget": "static-job-listing-master:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
     }
