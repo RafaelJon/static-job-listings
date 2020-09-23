@@ -1,30 +1,31 @@
-<div class="job-item-container">
+<div [ngStyle]="{'border-left-color': getColor()}" class="job-item-container">
     <div class="company-icon-container">
-        <img src="https://rumahits.com/wp-content/uploads/2019/04/cropped-Icon-Rumahits.png" alt="">
+        <img src="/assets/images/{{job.img}}" alt="">
     </div>
     <div class="job-detail-container">
         <div class="company-container">
-            Company            
-            <div class="new-bubble">
+            {{job.company}}
+            <div class="new-bubble" *ngIf="getNew()">
                 NEW!
             </div>
-            <div class="featured-bubble">
+            <div class="featured-bubble" *ngIf="getFeature()">
                 FEATURED
             </div>
         </div>
         <div class="job-container">
-            Senior Frontend Developer
+            {{job.job}}
         </div>
         <div class="job-desc-container">
-            <p>1d ago</p>
+            <p>{{job.date}}</p>
             <p class="dot-seperator">•</p>
-            <p>Full Time</p>
+            <p>{{job.type}}</p>
             <p class="dot-seperator">•</p>
-            <p>USA only</p>
+            <p>{{job.location}}</p>
         </div>
     </div>
+    <hr>
     <div class="filter-container">
         <!-- entar disini ng for buat filter componentnya -->
-        <app-filter-item></app-filter-item>
+        <app-filter-item *ngFor="let fil of job.filter" [filterName]="fil"></app-filter-item>
     </div>
 </div>

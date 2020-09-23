@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { JobsService } from 'src/app/jobs.service';
 
 @Component({
   selector: 'app-filter-box',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FilterBoxComponent implements OnInit {
 
-  constructor() { }
+  constructor(public _jobsService: JobsService) { }
 
   ngOnInit(): void {
+  }
+
+  clearFilter(){
+    this._jobsService.clearFilter();
   }
 
 }

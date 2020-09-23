@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { JobsService } from 'src/app/jobs.service';
 
 @Component({
   selector: 'app-filter-item',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./filter-item.component.scss']
 })
 export class FilterItemComponent implements OnInit {
+  @Input() filterName:string;
 
-  constructor() { }
+  constructor(private _jobService: JobsService) { }
 
   ngOnInit(): void {
+
   }
 
+  addFilter(){
+    this._jobService.addNewFilter(this.filterName);
+  }
 }

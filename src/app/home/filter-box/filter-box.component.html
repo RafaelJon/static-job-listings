@@ -1,20 +1,10 @@
-<div class="flying-container">
+<div class="flying-container" *ngIf="_jobsService.getCountFilter()">
     <div class="filter-box-container">
         <div class="filter-content">
-            <app-filter-item></app-filter-item>
-            <app-filter-item></app-filter-item>
-            <app-filter-item></app-filter-item>
-            <app-filter-item></app-filter-item>
-            <app-filter-item></app-filter-item>
-            <app-filter-item></app-filter-item><app-filter-item></app-filter-item>
-            <app-filter-item></app-filter-item>
-            <app-filter-item></app-filter-item><app-filter-item></app-filter-item>
-            <app-filter-item></app-filter-item>
-            <app-filter-item></app-filter-item>
+            <app-filter-item-tagged *ngFor="let fil of _jobsService.filtered" [filterName]="fil"></app-filter-item-tagged>
         </div>
-
         <div class="filter-clear-btn">
-            <p id="clear-btn">
+            <p id="clear-btn" (click)="clearFilter()">
                 Clear
             </p>
         </div>

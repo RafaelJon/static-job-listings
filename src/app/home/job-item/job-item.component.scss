@@ -13,9 +13,10 @@
     border-top: 0;
     border-radius: 8px;
     transition: .3s linear;
-    &:hover{
-        border-left-color: $prime;        
-    }
+}
+
+.featured-job{
+    border-left-color: $prime;        
 }
 
 .job-detail-container{
@@ -30,7 +31,8 @@
 	justify-content: flex-end;
 	align-items: flex-start;
 	align-content: center;
-    width: 50%;
+    width: 30%;
+    margin-left: auto;
 }
 
 .company-icon-container{
@@ -55,19 +57,18 @@
     padding: 10px 12px 7px;
     border-radius: 20px;
     font-weight: 700;
+    margin: 0 20px;
 }
 
 .new-bubble{
     @extend %bubble;
     background-color: $prime;
-    margin-left: 25px;
-    margin-right: 10px;
+    margin-right: 0;
 }
 
 .featured-bubble{
     @extend %bubble;
     background-color: $v-dgc;
-    margin: 0;
 }
 
 .job-container{
@@ -82,10 +83,6 @@
     }
 }
 
-.job-item-container{
-
-}
-
 .job-desc-container{
     @extend %flex-row;
     color: $dgc;
@@ -94,5 +91,43 @@
     }
     .dot-seperator{
         margin: 0 12px;
+    }
+}
+
+hr{
+    display: none;
+    width: 100%;
+    color: $dgc;
+    background-color: $dgc;
+}
+
+@media screen and (max-width:768px){
+    .job-item-container{
+        flex-direction: column;
+        margin: 50px auto;
+    }
+
+    .job-detail-container{
+        width: 100%;
+    }
+
+    .job-container{
+        margin: 10px 0;
+    }
+
+    hr{
+        display: unset;
+    }
+
+    .filter-container{
+        width: 100%;
+        margin: 0;
+        justify-content: flex-start;
+    }
+
+    .company-icon-container{
+        width: 15%;
+        margin: -30px 0;
+        transform: translateY(-50%);
     }
 }

@@ -1,0 +1,31 @@
+@use '~src/global' as *;
+
+.filter-tagged-container{
+    @extend %flex-row;
+    border-radius: 5px;
+    margin: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    &:hover{
+        .delete-btn{
+            background-color: black;
+        }
+    }
+}
+
+.filter-desc{
+    font-size: 15px;
+    font-weight: 700;
+    align-items: center;
+    color: $prime;
+    background-color: $lgc-t;
+    padding: 12px 9px 7px 9px;
+}
+
+.delete-btn{
+    background-color: $prime;
+    color: $lgc-t;
+    padding: 12px 10px 7px 10px;
+    font-weight: 700;
+    transition: .3s linear;
+}

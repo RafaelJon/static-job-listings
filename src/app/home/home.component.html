@@ -1,12 +1,7 @@
 <div class="container">
-    <app-filter-box></app-filter-box>
     <div class="header"></div>
     <div class="content">
-        <app-job-item></app-job-item>
-        <app-job-item></app-job-item>
-        <app-job-item></app-job-item>
-        <app-job-item></app-job-item>
-        <app-job-item></app-job-item>
-        <!-- disini ng for buat job item componentnya -->
+        <app-filter-box *ngIf="true"></app-filter-box>
+        <app-job-item *ngFor="let job of _jobsService.filteredJobs" [job]="job"></app-job-item>
     </div>
 </div>
